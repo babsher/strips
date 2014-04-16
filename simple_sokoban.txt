@@ -1,0 +1,1 @@
+Obstacle(0_0), , Obstacle(0_2), , Obstacle(0_4), , Obstacle(0_6), , , Obstacle(1_0), , , , , , , , , Obstacle(2_0), , , , BlockAt({0}_{1}), , At(R1,2_6), , Obstacle(3_0), , Obstacle(3_2), , Obstacle(3_4), , Obstacle(3_6), , Obstacle(3_8), 

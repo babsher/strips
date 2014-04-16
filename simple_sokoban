@@ -1,0 +1,11 @@
+Initial state: 
+Goal state:     On(A, B), On(B, C), OnTop(A), OnBottom(C)
+
+Actions:
+        Go(From, To)
+        Preconditions: At(From), !At(To)
+        Postconditions: At(To), !At(From)
+
+        Push(Block1, Block2, Tower)
+        Preconditions: At(Tower), Holding(Block1), BlockAt(Block2, Tower), OnTop(Block2)
+        Postconditions: !Holding(Block1), !OnTop(Block2), BlockAt(Block1, Tower), OnTop(Block1), On(Block1, Block2)

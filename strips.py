@@ -340,7 +340,7 @@ def create_world(filename):
 
     return w
 
-debug = False
+debug = True
 
 def linear_solver(world):
     state = []
@@ -356,13 +356,10 @@ def linear_solver(world):
 def linear_solver_helper(world, state, goals, current_plan, depth = 0):
     padding = "".join(["++" for x in range(0,len(current_plan))]) + " "
     plan = []
-
-    """
     print "Current Plan: {0}".format("\n".join([x.simple_str() for x in current_plan]))
     print ""
     print "---------------------------"
     print ""
-    """
 
     if len(goals) == 0:
         return plan

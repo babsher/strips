@@ -340,7 +340,7 @@ def create_world(filename):
 
     return w
 
-debug = True
+debug = False
 
 def linear_solver(world):
     state = []

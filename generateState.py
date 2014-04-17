@@ -23,7 +23,9 @@ for line in file.readlines():
             if entry == '1' :
                 out.write('Obstacle({0}_{1})'.format(row, col))
             elif entry == 'R1':
-                out.write('At(R1,{0}_{1})'.format(row, col))
+                out.write('RobotAt(R1,{0}_{1}), '.format(row, col))
+                out.write('Obstacle({0}_{1}), '.format(row, col))
+                out.write('IsRobot(R1)'.format(row, col))
             elif entry == 'B':
                 out.write('BlockAt({0}_{1})'.format(row, col))
             elif entry == 'O':
@@ -34,7 +36,7 @@ for line in file.readlines():
             else:
                 print 'Unknown: {}'.format(entry)
 
-            if col != len(entries) and entry != '':
+            if col != (len(entries)-1) and entry != '':
                 out.write(', ')
             col += 1
     row += 1

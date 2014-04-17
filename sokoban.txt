@@ -1,0 +1,11 @@
+Initial state: Obstacle(0_0), Obstacle(0_1), Obstacle(0_2), Obstacle(0_3), Obstacle(0_4), Obstacle(1_0), Open(1_1), Open(1_2), Open(1_3), Obstacle(1_4), Obstacle(2_0), End(2_1), Open(2_1), BlockAt(2_2), At(R1,2_3), Obstacle(2_4), Obstacle(3_0), Obstacle(3_1), Obstacle(3_2), Obstacle(3_3), Obstacle(3_4)
+Goal State: BlockAt(2_1)
+
+Actions:
+        Go(From, To)
+        Preconditions: At(From), !At(To), !Obstacle(To), !BlockAt(To)
+        Postconditions: At(To), !At(From)
+
+        PlaceOn(Robot, To, From, RobotAt)
+        Preconditions: BlockAt(From), !Obstacle(To), RobotAt(RobotAt)
+        Postconditions: !BlockAt(From), BlockAt(To), !RobotAt(RobotAt), RobotAt(From)

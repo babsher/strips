@@ -3,8 +3,6 @@ import thread
 import time
 import socket
 from select import select
-import sys
-import threading
 import struct
 
 HOST = '10.0.0.31'
@@ -128,13 +126,3 @@ class FlockBot():
     def stop(self):
         msg = struct.pack('=b2s', 2, 'ST')
         self.send.put(msg)
-        
-
-bot = FlockBot(HOST)
-bot.connect()
-bot.rotate(50, 90)
-time.sleep(5)
-print bot.read()
-bot.stop()
-print bot.read()
-bot.close()

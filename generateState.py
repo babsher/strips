@@ -93,7 +93,7 @@ printLoc(goal)
 
 out.write("  )  \n(:init\n")
 
-printPat(goal, "    (:IS-GOAL pos-{0[0]}-{0[1]})\n")
+printPat(goal, "    (IS-GOAL pos-{0[0]}-{0[1]})\n")
 printNonGoal(robot)
 printNonGoal(box)
 printNonGoal(open)
